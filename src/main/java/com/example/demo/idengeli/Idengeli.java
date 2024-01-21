@@ -1,7 +1,7 @@
 package com.example.demo.idengeli;
 import java.time.LocalDate;
 
-public class idengeli {
+public class Idengeli {
     private long id;
     private String name;
     private int age;
@@ -10,11 +10,22 @@ public class idengeli {
     private LocalDate dateOfBirth;
     private String email;
 
-    public idengeli() {
+    public Idengeli() {
     }
 
-    public idengeli(long id, String name, int age, String occupation, char gender, LocalDate dateOfBirth, String email) {
+    public Idengeli(long id, String name, int age, String occupation, char gender, LocalDate dateOfBirth, String email) {
         this.id = id;
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.email = email;
+    }
+
+
+    //Constuctor without ID because the DB will geberate it for us
+    public Idengeli(String name, int age, String occupation, char gender, LocalDate dateOfBirth, String email) {
         this.name = name;
         this.age = age;
         this.occupation = occupation;
@@ -77,5 +88,23 @@ public class idengeli {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+//    next we add the toString constructor
+    //**
+    // The toString() method in Java is used to convert an object into a string, with the syntax: “. It's a part of the Object class and can be overridden for user-defined classes to provide a meaningful string representation of an object.
+
+
+    @Override
+    public String toString() {
+        return "Idengeli{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", occupation='" + occupation + '\'' +
+                ", gender=" + gender +
+                ", dateOfBirth=" + dateOfBirth +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
