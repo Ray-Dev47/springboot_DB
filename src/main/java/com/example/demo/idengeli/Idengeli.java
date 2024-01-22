@@ -1,6 +1,7 @@
 package com.example.demo.idengeli;
 import java.time.LocalDate;
 
+//definition of class data
 public class Idengeli {
     private long id;
     private String name;
@@ -10,6 +11,7 @@ public class Idengeli {
     private LocalDate dateOfBirth;
     private String email;
 
+//    empty idengeli constructor
     public Idengeli() {
     }
 
@@ -24,7 +26,7 @@ public class Idengeli {
     }
 
 
-    //Constuctor without ID because the DB will geberate it for us
+    //Constuctor without ID because the DB will generate it for us
     public Idengeli(String name, int age, String occupation, char gender, LocalDate dateOfBirth, String email) {
         this.name = name;
         this.age = age;
@@ -34,6 +36,8 @@ public class Idengeli {
         this.email = email;
     }
 
+
+//    getters and setters
     public long getId() {
         return id;
     }
