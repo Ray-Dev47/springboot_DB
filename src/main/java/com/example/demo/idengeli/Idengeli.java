@@ -1,5 +1,14 @@
 package com.example.demo.idengeli;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
+
+
+
+@Entity
+@Table
+
 
 //definition of class data
 public class Idengeli {
